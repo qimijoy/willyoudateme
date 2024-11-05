@@ -1,0 +1,109 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport"
+	      content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<style>
+		body {
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			height: 90vh;
+			background-color: #f4f6f4;
+		}
+
+		h1 {
+			font-size: 40px;
+			font-weight: bold;
+			color: #FFB6C1;
+			text-align: center;
+			margin-top: 20px;
+			margin-bottom: 0;
+		}
+
+		.image-container {
+			display: flex;
+			justify-content: center;
+			align-items: center;
+		}
+
+		.buttons {
+			display: flex;
+			flex-direction: row;
+			justify-content: center;
+			align-items: center;
+			margin-top: 20px;
+			margin-left: 20px;
+		}
+
+		.buttons button {
+			background-color: #FFB6C1;
+			color: white;
+			padding: 15px 32px;
+			text-align: center;
+			display: inline-block;
+			font-size: 16px;
+			margin: 4px 2px;
+			cursor: pointer;
+			border: none;
+			border-radius: 12px;
+			transition: background-color 0.3s ease;
+		}
+
+		#no {
+			position: absolute;
+			margin-left: 150px;
+			transition: 0.5s;
+		}
+
+		#yes {
+			position: absolute;
+			margin-right: 150px;
+		}
+	</style>
+	<title>Document</title>
+</head>
+<body>
+	<div class="container">
+		<h1 class="header">Пойдешь со мной на свидание?</h1>
+		<div class="content">
+			<div class="image-container">
+				<img src="./first.gif" alt="Тут картинка с котиком">
+			</div>
+			<div class="buttons">
+				<button id="yes" onclick="yes()">Да</button>
+				<button id="no" onmouseover="moveButton()" onclick="moveButton()">Нет</button>
+			</div>
+		</div>
+	</div>
+
+	<script>
+		function yes() {
+			document.querySelector('.content').innerHTML = `
+				<div class="image-container">
+					<img src="./yes.gif" alt="Тут картинка с котиком">
+				</div>
+			`
+
+			document.body.style.backgroundColor = 'rgb(252,254,252)';
+
+			document.querySelector('.header').innerText = 'Еееееееее!!'
+		}
+
+		function moveButton() {
+			console.log(document.getElementById('yes').offsetLeft)
+			console.log(document.getElementById('no').offsetTop)
+			const x = Math.random() * (window.innerWidth - document.getElementById('yes').offsetLeft);
+			const y = Math.random() * (window.innerHeight - document.getElementById('no').offsetTop);
+
+			console.log(x);
+			console.log(y);
+
+			document.getElementById('no').style.left = `${x}px`;
+			document.getElementById('no').style.top = `${y}px`;
+		}
+	</script>
+</body>
+</html>
