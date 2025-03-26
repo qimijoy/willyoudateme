@@ -13,22 +13,22 @@
     "lint": "npm run eslint && npm run stylelint"
   },
   "devDependencies": {
-    "@eslint/js": "9.21.0",
+    "@eslint/js": "9.23.0",
     "@qimijoy/browserslist-config": "1.1.2",
     "@qimijoy/prettier-config": "1.0.2",
-    "@qimijoy/stylelint-config": "^1.0.3",
-    "eslint": "9.21.0",
-    "eslint-config-prettier": "10.0.2",
-    "eslint-plugin-prettier": "5.2.3",
+    "@qimijoy/stylelint-config": "1.0.3",
+    "eslint": "9.23.0",
+    "eslint-config-prettier": "10.1.1",
+    "eslint-plugin-prettier": "5.2.5",
     "globals": "16.0.0",
     "husky": "9.1.7",
-    "lint-staged": "15.4.3",
+    "lint-staged": "15.5.0",
     "prettier": "3.5.3",
-    "stylelint": "^16.15.0",
-    "stylelint-config-standard": "^37.0.0",
-    "stylelint-declaration-block-no-ignored-properties": "^2.8.0",
-    "stylelint-no-unsupported-browser-features": "^8.0.4",
-    "stylelint-order": "^6.0.4",
-    "stylelint-prettier": "^5.0.3"
+    "stylelint": "16.16.0",
+    "stylelint-config-standard": "37.0.0",
+    "stylelint-declaration-block-no-ignored-properties": "2.8.0",
+    "stylelint-no-unsupported-browser-features": "8.0.4",
+    "stylelint-order": "6.0.4",
+    "stylelint-prettier": "5.0.3"
   }
 }

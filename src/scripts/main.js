@@ -10,7 +10,7 @@ document.addEventListener('DOMContentLoaded', () => {
 		document.querySelector('.image-container.hide').classList.remove('hide');
 		document.querySelector('.content').classList.add('hide');
 		document.body.classList.add('yes_background');
-		document.querySelector('.header').innerText = 'Еееееееее!!';
+		document.querySelector('.header').innerText = 'Yeeeeees!!';
 	}
 
 	function moveButton() {
